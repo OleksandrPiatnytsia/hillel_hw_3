@@ -23,6 +23,17 @@ def divide_numbers(num1: int, num2: int) -> tuple[int, int]:
     return num1 // num2, num1 % num2
 
 
+# 3.1 Напишіть функцію для обчислення середнього значення списку чисел.
+def mean(digits: list[int]) -> float:
+
+    return sum(digits) / len(digits)
+
+
+# 3.2 Реалізуйте функцію, яка приймає два списки і повертає список, який містить спільні елементи обох списків
+def common_elements(list1: list[int], list2: list[int]) -> list[int]:
+    return list(set(list1) & set(list2))
+
+
 if __name__ == "__main__":
     print(get_str_length("dfgh"))
 
@@ -33,3 +44,9 @@ if __name__ == "__main__":
     print(sum_numbers(1, 2))
 
     print(divide_numbers(5, 2))
+
+    print(concat_strings("asd", "fgh"))
+
+    print(mean([1, 2, 3]))
+
+    print(common_elements([1, 2, 3, 4, 5], [3, 4, 5, 6]))
