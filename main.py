@@ -65,6 +65,10 @@ def filter_od_numbers(list_: list[int]) -> list[int]:
     return list(filter(lambda num: num % 2 == 0, list_))
 
 
+# 7.1 Написати лямбда-функцію визначальну парне/непарне.
+lambda_od_def = lambda num: num % 2 == 0
+
+
 if __name__ == "__main__":
     print(get_str_length("dfgh"))
 
@@ -95,3 +99,7 @@ if __name__ == "__main__":
     check_od_number(5)
 
     print(filter_od_numbers([1, 2, 3, 4, 5, 6, 7, 8]))
+
+    print(lambda_od_def(2))
+    print(lambda_od_def(3))
+    print(lambda_od_def(4))
