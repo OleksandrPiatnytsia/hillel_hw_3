@@ -55,6 +55,16 @@ def is_subset(set1: set[int], set2: set[int]) -> bool:
     return set1.issubset(set2)
 
 
+# 6.1 Реалізуйте функцію, яка приймає число і виводить "Парне", якщо число парне, і "Непарне", якщо непарне.
+def check_od_number(num: int) -> None:
+    print("Парне" if num % 2 == 0 else "Непарне")
+
+
+# 6.2 Створіть функцію, яка приймає список чисел і повертає новий список, що містить тільки парні числа.
+def filter_od_numbers(list_: list[int]) -> list[int]:
+    return list(filter(lambda num: num % 2 == 0, list_))
+
+
 if __name__ == "__main__":
     print(get_str_length("dfgh"))
 
@@ -79,3 +89,9 @@ if __name__ == "__main__":
     print(set_union({1, 2, 3}, {2, 3, 4}))
 
     print(is_subset({1, 2}, {1, 2, 3}))
+
+    check_od_number(3)
+    check_od_number(4)
+    check_od_number(5)
+
+    print(filter_od_numbers([1, 2, 3, 4, 5, 6, 7, 8]))
