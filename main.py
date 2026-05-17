@@ -45,6 +45,16 @@ def dict_union(dict1: dict[str, int], dict2: dict[str, int]) -> dict[str, int]:
     return dict1 | dict2
 
 
+# 5.1 Напишіть функцію, яка приймає дві множини і повертає їхнє об'єднання.
+def set_union(set1: set[int], set2: set[int]) -> set[int]:
+    return set1 | set2
+
+
+# 5.2 Створіть функцію, яка перевіряє, чи є одна множина підмножиною іншої
+def is_subset(set1: set[int], set2: set[int]) -> bool:
+    return set1.issubset(set2)
+
+
 if __name__ == "__main__":
     print(get_str_length("dfgh"))
 
@@ -65,3 +75,7 @@ if __name__ == "__main__":
     get_dict_keys({"key1": 1, "key2": 2})
 
     print(dict_union({"key1": 1, "key2": 2}, {"key3": 3, "key4": 4, "key1": 5}))
+
+    print(set_union({1, 2, 3}, {2, 3, 4}))
+
+    print(is_subset({1, 2}, {1, 2, 3}))
